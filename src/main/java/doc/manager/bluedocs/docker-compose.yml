@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - MYSQL_DATABASE=bluedocs
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=Samuel080786
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"
